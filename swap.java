@@ -13,10 +13,16 @@ class swap{
         x=x+y;
         y=x-y;
         x=x-y;
-        System.out.println("Numbers after swapping - \na= "+x+"\nb="+y);
+        System.out.println("Numbers after swapping without using temp variable - \na= "+x+"\nb="+y);
     } 
 
+    public static void swapusing_XOR(int x, int y){
+        x=x^y;
+        y=x^y;
+        x=x^y;
+        System.out.println("Numbers after swapping without using temp variable - \na= "+x+"\nb="+y);
 
+    }
 
     public static void main(String[] args) {
         Scanner in=new Scanner(System.in);
@@ -27,6 +33,8 @@ class swap{
         int b= in.nextInt();
         System.out.println("Numbers before swapping - \na= "+a+"\nb="+b);
         swapnum(a,b);
+        swapwithout_temp(a,b);
+        swapusing_XOR(a,b);
         
        
     }
